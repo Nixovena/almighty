@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Almighty Linux — A hybrid Debian Testing / Kali-based distribution engineered for OSINT, intelligence gathering, and operational security.">
+    <title>Almighty Linux — The Distro of Someones Who Can See Everything</title>
+    <link rel="icon" href="Assets/logo.png" type="image/png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="Assets/logo.png" alt="Almighty Linux">
+                <span>ALMIGHTY</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Overview</a></li>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="docs.html">Docs</a></li>
+                <li><a href="releases.html">Releases</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="download.html">Download</a></li>
+                <li><a href="osint-sources.html">OSINT Sources</a></li>
+                <li><a href="newsletter.html">Newsletter</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-layer"></div>
+        <div class="hero-bg-color"></div>
+        <div class="hero-particles" id="heroParticles"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">ALMIGHTY LINUX</h1>
+            <p class="hero-subtitle">The distro for those who can see everything</p>
+            <div class="hero-actions">
+                <a href="download.html" class="btn btn-primary">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                        <polyline points="7 10 12 15 17 10" />
+                        <line x1="12" y1="15" x2="12" y2="3" />
+                    </svg>
+                    Download ISO
+                </a>
+                <a href="docs.html" class="btn btn-secondary">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                        <polyline points="14 2 14 8 20 8" />
+                        <line x1="16" y1="13" x2="8" y2="13" />
+                        <line x1="16" y1="17" x2="8" y2="17" />
+                    </svg>
+                    Read Docs
+                </a>
+            </div>
+        </div>
+        <div class="hero-screenshot">
+            <div class="screenshot-frame">
+                <div class="screenshot-glow"></div>
+                <img src="Assets/desktop.png" alt="Almighty Linux Desktop" loading="lazy">
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span>SCROLL</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about-section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;/&gt; OVERVIEW</span>
+                <h2 class="section-title">What is <span class="text-red">Almighty</span> Linux?</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-content">
+                    <p class="about-lead">Almighty Linux is a hybrid Linux distribution based on <strong>Debian
+                            Testing</strong> and <strong>Kali Linux</strong>, purpose-built for intelligence gathering
+                        and OSINT operations.</p>
+                    <p>It ships with <strong>79 OSINT and security tools</strong> — 49 custom-built scripts and a
+                        purpose-built browser developed exclusively for Almighty Linux, plus 30 industry-standard
+                        packages from the Kali repositories.</p>
+                    <p>The distribution features a hardened kernel tuning profile, along with a comprehensive suite of
+                        anonymity, trace-cleaning, isolation, and security tools designed to maintain operational
+                        security during intelligence gathering. It also includes the <strong>Almighty OSINT
+                            Browser</strong> — a custom Chromium-based browser with integrated OSINT utilities and
+                        user-agent spoofing capabilities. The distribution uses <strong>MATE</strong> as its desktop
+                        environment.</p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="79">0</span>
+                            <span class="stat-label">OSINT Tools</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="visual-card">
+                        <img src="Assets/desktop-tools.png" alt="Almighty Tools" loading="lazy">
+                        <div class="visual-card-overlay">
+                            <span>Tool Arsenal</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section features-section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&#9632; CAPABILITIES</span>
+                <h2 class="section-title">Core <span class="text-red">Features</span></h2>
+                <p class="section-desc">Built from the ground up for intelligence professionals and security
+                    researchers.</p>
+            </div>
+            <div class="features-grid">
+                <!-- Feature 1: Tool Arsenal -->
+                <div class="feature-card" id="feature-tools">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="m21 21-4.35-4.35" />
+                        </svg>
+                    </div>
+                    <h3>79 OSINT Tools</h3>
+                    <p>A curated arsenal of 49 custom-built scripts and 30 industry-standard Kali packages covering
+                        social media profiling, dark web reconnaissance, network analysis, and digital forensics.</p>
+                    <div class="feature-tags">
+                        <span>OSINT</span><span>Recon</span><span>Forensics</span><span>Dark Web</span>
+                    </div>
+                </div>
+
+                <!-- Feature 2: OSINT Browser -->
+                <div class="feature-card" id="feature-browser">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="2" y1="12" x2="22" y2="12" />
+                            <path
+                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                        </svg>
+                    </div>
+                    <h3>OSINT Browser</h3>
+                    <p>Custom Chromium-based browser with built-in fingerprint protection, canvas/WebGL/AudioContext
+                        spoofing, WebRTC blocking, and integrated OSINT utilities including Base64, CIDR calculator, and
+                        email validation.</p>
+                    <div class="feature-tags">
+                        <span>Anti-Fingerprint</span><span>WebRTC Block</span><span>UA Spoof</span>
+                    </div>
+                </div>
+
+                <!-- Feature 3: Hardened Kernel -->
+                <div class="feature-card" id="feature-hardening">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg>
+                    </div>
+                    <h3>Hardened Kernel</h3>
+                    <p>Multi-layered security from bootloader to userspace: ASLR, stack randomization, Spectre/Meltdown
+                        mitigations, BPF hardening, PTrace restrictions, and automatic permission enforcement on every
+                        boot.</p>
+                    <div class="feature-tags">
+                        <span>ASLR</span><span>Sysctl</span><span>Mitigations</span><span>Sandboxing</span>
+                    </div>
+                </div>
+
+                <!-- Feature 4: Anonymity -->
+                <div class="feature-card" id="feature-anonymity">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                            <circle cx="12" cy="12" r="3" />
+                        </svg>
+                    </div>
+                    <h3>Operational Security</h3>
+                    <p>Full Tor integration, MAC address spoofing, hostname randomization, DNS changer, forensic trace
+                        cleaner, and application isolation via Firejail and Bubblewrap sandboxing profiles.</p>
+                    <div class="feature-tags">
+                        <span>Tor</span><span>MAC Spoof</span><span>Trace Clean</span><span>Isolation</span>
+                    </div>
+                </div>
+
+                <!-- Feature 5: Dark Web -->
+                <div class="feature-card" id="feature-darkweb">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                            <path d="M2 17l10 5 10-5" />
+                            <path d="M2 12l10 5 10-5" />
+                        </svg>
+                    </div>
+                    <h3>Dark Web Recon</h3>
+                    <p>Eight dedicated onion network tools: site archivers, search engine aggregators, link extractors,
+                        crypto wallet hunters, and hidden service forensics — all operating through Tor circuits.</p>
+                    <div class="feature-tags">
+                        <span>Onion</span><span>Archiver</span><span>Spider</span><span>Forensics</span>
+                    </div>
+                </div>
+
+                <!-- Feature 6: Desktop -->
+                <div class="feature-card" id="feature-desktop">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                            <line x1="8" y1="21" x2="16" y2="21" />
+                            <line x1="12" y1="17" x2="12" y2="21" />
+                        </svg>
+                    </div>
+                    <h3>MATE Desktop</h3>
+                    <p>Lightweight, professional MATE desktop environment with custom Conky system monitors, branded
+                        terminal splash screens, and an interface designed for extended investigation sessions.</p>
+                    <div class="feature-tags">
+                        <span>MATE</span><span>Conky</span><span>Lightweight</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Gallery -->
+    <section class="section gallery-section" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&#9654; GALLERY</span>
+                <h2 class="section-title">See It In <span class="text-red">Action</span></h2>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-label="OSINT Frameworks">
+                    <img src="Assets/desktop-frameworks.png" alt="OSINT Frameworks" loading="lazy">
+                </div>
+                <div class="gallery-item" data-label="Social Media Tools">
+                    <img src="Assets/desktop-social.png" alt="Social Media Tools" loading="lazy">
+                </div>
+                <div class="gallery-item" data-label="Network Analysis">
+                    <img src="Assets/desktop-ip.png" alt="Network Analysis Tools" loading="lazy">
+                </div>
+                <div class="gallery-item" data-label="Dark Web Tools">
+                    <img src="Assets/desktop-darknet.png" alt="Dark Web Tools" loading="lazy">
+                </div>
+                <div class="gallery-item" data-label="OSINT Browser">
+                    <img src="Assets/desktop-int.png" alt="OSINT Browser" loading="lazy">
+                </div>
+                <div class="gallery-item" data-label="Calamares Installer">
+                    <img src="Assets/desktop-calamares.png" alt="Calamares Installer" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Teaser Section -->
+    <section class="section cta-teaser-section">
+        <div class="container">
+            <div class="cta-teaser-box">
+                <video class="cta-teaser-video" autoplay muted loop playsinline>
+                    <source src="Assets/teaser.mp4" type="video/mp4">
+                </video>
+                <div class="cta-teaser-overlay"></div>
+                <div class="cta-teaser-content">
+                    <h2>Ready to See Everything?</h2>
+                    <p>Download Almighty Linux.</p>
+                    <a href="download.html" class="btn btn-primary">Download Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="Assets/logo.png" alt="Almighty Linux" class="footer-logo">
+                    <span class="footer-name">ALMIGHTY LINUX</span>
+                </div>
+                <div class="footer-slogan">
+                    <span>&gt;_</span> The distro for those who can see everything
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Overview</a>
+                    <a href="tools.html">Tools</a>
+                    <a href="docs.html">Docs</a>
+                    <a href="download.html">Download</a>
+                </div>
+                <div class="footer-bottom">
+                    <p>Developed by <a href="https://nixovena.org" target="_blank" rel="noopener">Nixovena Labs</a>
+                        &mdash; <a href="https://nixovena.org" target="_blank" rel="noopener">nixovena.org</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

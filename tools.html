@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Almighty Linux Tool Inventory — 79 OSINT, security, and intelligence tools.">
+    <title>Tools — Almighty Linux</title>
+    <link rel="icon" href="Assets/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="Assets/logo.png" alt="Almighty Linux">
+                <span>ALMIGHTY</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Overview</a></li>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="tools.html" class="active">Tools</a></li>
+                <li><a href="docs.html">Docs</a></li>
+                <li><a href="releases.html">Releases</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="download.html">Download</a></li>
+                <li><a href="osint-sources.html">OSINT Sources</a></li>
+                <li><a href="newsletter.html">Newsletter</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-hero">
+        <h1>Tool <span class="text-red">Inventory</span></h1>
+        <p>79 OSINT and security tools — 49 custom-built, 30 from Kali repositories.</p>
+    </section>
+
+    <section class="section" style="padding-top: 20px;">
+        <div class="container">
+
+            <!-- Legend -->
+            <div class="tool-legend">
+                <img src="Assets/logo.png" alt="Almighty"> Tools marked with the Almighty logo are custom-built exclusively for this distribution.
+            </div>
+
+            <!-- Search & Source Filter -->
+            <div class="tools-controls">
+                <div class="search-box">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                    <input type="text" id="toolSearch" placeholder="Search tools by name, description, or category...">
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All (79)</button>
+                    <button class="filter-btn" data-filter="almighty">Almighty (49)</button>
+                    <button class="filter-btn" data-filter="kali">Kali (30)</button>
+                </div>
+            </div>
+
+            <!-- Category Filter -->
+            <div class="category-filters" id="categoryFilters">
+                <button class="cat-btn active" data-cat="all">All</button>
+                <button class="cat-btn" data-cat="framework">Framework</button>
+                <button class="cat-btn" data-cat="emails">Emails</button>
+                <button class="cat-btn" data-cat="phone">Phone</button>
+                <button class="cat-btn" data-cat="social media">Social Media</button>
+                <button class="cat-btn" data-cat="darknet">Darknet</button>
+                <button class="cat-btn" data-cat="domain/ip">Domain/IP</button>
+                <button class="cat-btn" data-cat="analysis">Analysis</button>
+                <button class="cat-btn" data-cat="network">Network</button>
+                <button class="cat-btn" data-cat="forensics">Forensics</button>
+                <button class="cat-btn" data-cat="privacy">Privacy</button>
+                <button class="cat-btn" data-cat="security">Security</button>
+            </div>
+
+            <div class="tools-count" id="toolCount">Showing <strong>79</strong> of <strong>79</strong> tools</div>
+
+            <div class="tools-grid" id="toolsGrid">
+
+                <!-- ============ ALMIGHTY CUSTOM TOOLS ============ -->
+
+                <!-- OSINT Browser -->
+                <div class="tool-card" data-name="almighty-osint-browser" data-source="almighty" data-category="analysis" data-desc="Privacy-focused Chromium browser with fingerprint protection and built-in OSINT utilities.">
+                    <div class="tool-card-header">
+                        <img src="Assets/logo.png" alt="" class="tool-icon">
+                        <span class="tool-name">almighty-osint-browser</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Analysis</span>
+                    <p class="tool-desc">Privacy-focused Chromium browser with fingerprint protection, canvas/WebGL/AudioContext spoofing, and built-in OSINT utilities.</p>
+                </div>
+
+                <!-- Frameworks -->
+                <div class="tool-card" data-name="5piderx" data-source="almighty" data-category="framework" data-desc="Multi-module OSINT research platform with email, username, domain, IP, phone, and dork modules.">
+                    <div class="tool-card-header">
+                        <img src="Assets/logo.png" alt="" class="tool-icon">
+                        <span class="tool-name">5piderx</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Framework</span>
+                    <p class="tool-desc">Multi-module OSINT research platform with email, username, domain, IP, phone, and dork modules.</p>
+                </div>
+
+                <div class="tool-card" data-name="near2h4ck" data-source="almighty" data-category="framework" data-desc="Web security and intelligence framework with recon modules, vulnerability scanning (SQLi, XSS).">
+                    <div class="tool-card-header">
+                        <img src="Assets/logo.png" alt="" class="tool-icon">
+                        <span class="tool-name">near2h4ck</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Framework</span>
+                    <p class="tool-desc">Web security and intelligence framework with recon modules, vulnerability scanning (SQLi, XSS).</p>
+                </div>
+
+                <div class="tool-card" data-name="osintripper" data-source="almighty" data-category="social media" data-desc="Heuristic username scanner with content analysis to distinguish false positives across social platforms.">
+                    <div class="tool-card-header">
+                        <img src="Assets/logo.png" alt="" class="tool-icon">
+                        <span class="tool-name">osintripper</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Social Media</span>
+                    <p class="tool-desc">Heuristic username scanner with content analysis to distinguish false positives across social platforms.</p>
+                </div>
+
+                <!-- Social Media -->
+                <div class="tool-card" data-name="osgint" data-source="almighty" data-category="social media" data-desc="GitHub OSINT tool for repository analysis, email leaks, GPG/SSH keys, and profile intelligence.">
+                    <div class="tool-card-header">
+                        <span class="tool-name">osgint</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Social Media</span>
+                    <p class="tool-desc">GitHub OSINT tool for repository analysis, email leaks, GPG/SSH keys, and profile intelligence.</p>
+                </div>
+
+                <div class="tool-card" data-name="fbosint" data-source="almighty" data-category="social media" data-desc="Facebook profiler for deep social profile mining via name, ID, URL, or phone.">
+                    <div class="tool-card-header">
+                        <img src="Assets/logo.png" alt="" class="tool-icon">
+                        <span class="tool-name">fbosint</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Social Media</span>
+                    <p class="tool-desc">Facebook profiler for deep social profile mining via name, ID, URL, or phone.</p>
+                </div>
+
+                <div class="tool-card" data-name="ttosint" data-source="almighty" data-category="social media" data-desc="TikTok account and content analysis intelligence tool.">
+                    <div class="tool-card-header">
+                        <img src="Assets/logo.png" alt="" class="tool-icon">
+                        <span class="tool-name">ttosint</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Social Media</span>
+                    <p class="tool-desc">TikTok account and content analysis intelligence tool.</p>
+                </div>
+
+                <div class="tool-card" data-name="ytb0sint" data-source="almighty" data-category="social media" data-desc="YouTube channel data mining module.">
+                    <div class="tool-card-header">
+                        <img src="Assets/logo.png" alt="" class="tool-icon">
+                        <span class="tool-name">ytb0sint</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Social Media</span>
+                    <p class="tool-desc">YouTube channel data mining module.</p>
+                </div>
+
+                <div class="tool-card" data-name="linkedin2username" data-source="almighty" data-category="social media" data-desc="Generates corporate email and username patterns from LinkedIn employee listings.">
+                    <div class="tool-card-header">
+                        <span class="tool-name">linkedin2username</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Social Media</span>
+                    <p class="tool-desc">Generates corporate email and username patterns from LinkedIn employee listings.</p>
+                </div>
+
+                <div class="tool-card" data-name="telegram-scraper" data-source="almighty" data-category="social media" data-desc="Telegram message and media scraper that archives to SQLite/CSV databases.">
+                    <div class="tool-card-header">
+                        <span class="tool-name">telegram-scraper</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Social Media</span>
+                    <p class="tool-desc">Telegram message and media scraper that archives to SQLite/CSV databases.</p>
+                </div>
+
+                <div class="tool-card" data-name="telegrm00" data-source="almighty" data-category="social media" data-desc="Telegram user and group metadata analysis with pattern detection intelligence module.">
+                    <div class="tool-card-header">
+                        <img src="Assets/logo.png" alt="" class="tool-icon">
+                        <span class="tool-name">telegrm00</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Social Media</span>
+                    <p class="tool-desc">Telegram user and group metadata analysis with pattern detection intelligence module.</p>
+                </div>
+
+                <div class="tool-card" data-name="tgosint" data-source="almighty" data-category="social media" data-desc="Pyrogram-based Telegram search and Peer ID resolution discovery tool.">
+                    <div class="tool-card-header">
+                        <img src="Assets/logo.png" alt="" class="tool-icon">
+                        <span class="tool-name">tgosint</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Social Media</span>
+                    <p class="tool-desc">Pyrogram-based Telegram search and Peer ID resolution discovery tool.</p>
+                </div>
+
+                <div class="tool-card" data-name="protosint" data-source="almighty" data-category="emails" data-desc="Proton intelligence tool for ProtonMail account verification, ProtonVPN and ProtonDrive status.">
+                    <div class="tool-card-header">
+                        <span class="tool-name">protosint</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Emails</span>
+                    <p class="tool-desc">Proton intelligence tool for ProtonMail account verification, ProtonVPN and ProtonDrive status.</p>
+                </div>
+
+                <!-- Network & Privacy -->
+                <div class="tool-card" data-name="ghost-track" data-source="almighty" data-category="phone" data-desc="All-in-one tracker: IP tracking, phone intelligence, and 20+ social media username scanning.">
+                    <div class="tool-card-header">
+                        <span class="tool-name">ghost-track</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Phone</span>
+                    <p class="tool-desc">All-in-one tracker: IP tracking, phone intelligence, and 20+ social media username scanning.</p>
+                </div>
+
+                <div class="tool-card" data-name="anonroute" data-source="almighty" data-category="privacy" data-desc="Routes system traffic through the Tor network for anonymization.">
+                    <div class="tool-card-header">
+                        <img src="Assets/logo.png" alt="" class="tool-icon">
+                        <span class="tool-name">anonroute</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Privacy</span>
+                    <p class="tool-desc">Routes system traffic through the Tor network for anonymization.</p>
+                </div>
+
+                <div class="tool-card" data-name="tor-portal" data-source="almighty" data-category="privacy" data-desc="Tor network status and external IP security verification terminal portal.">
+                    <div class="tool-card-header">
+                        <img src="Assets/logo.png" alt="" class="tool-icon">
+                        <span class="tool-name">tor-portal</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Privacy</span>
+                    <p class="tool-desc">Tor network status and external IP security verification terminal portal.</p>
+                </div>
+
+                <div class="tool-card" data-name="dnschanger" data-source="almighty" data-category="privacy" data-desc="Secure and censorship-free DNS management utility.">
+                    <div class="tool-card-header">
+                        <img src="Assets/logo.png" alt="" class="tool-icon">
+                        <span class="tool-name">dnschanger</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Privacy</span>
+                    <p class="tool-desc">Secure and censorship-free DNS management utility.</p>
+                </div>
+
+                <div class="tool-card" data-name="change-mac" data-source="almighty" data-category="privacy" data-desc="Network interface MAC address changer and randomizer.">
+                    <div class="tool-card-header">
+                        <img src="Assets/logo.png" alt="" class="tool-icon">
+                        <span class="tool-name">change-mac</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Privacy</span>
+                    <p class="tool-desc">Network interface MAC address changer and randomizer.</p>
+                </div>
+
+                <div class="tool-card" data-name="anonhost" data-source="almighty" data-category="privacy" data-desc="Randomizes the system hostname on the network for identity obfuscation.">
+                    <div class="tool-card-header">
+                        <img src="Assets/logo.png" alt="" class="tool-icon">
+                        <span class="tool-name">anonhost</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Privacy</span>
+                    <p class="tool-desc">Randomizes the system hostname on the network for identity obfuscation.</p>
+                </div>
+
+                <div class="tool-card" data-name="curl-wget-agentspoofer" data-source="almighty" data-category="privacy" data-desc="User-Agent spoofing for web requests to prevent fingerprint tracking.">
+                    <div class="tool-card-header">
+                        <img src="Assets/logo.png" alt="" class="tool-icon">
+                        <span class="tool-name">curl-wget-agentspoofer</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Privacy</span>
+                    <p class="tool-desc">User-Agent spoofing for web requests to prevent fingerprint tracking.</p>
+                </div>
+
+                <!-- Dark Web -->
+                <div class="tool-card" data-name="wormtipede" data-source="almighty" data-category="darknet" data-desc="Onion archiver that scrapes and archives crypto wallets, PGP keys, and emails from .onion sites.">
+                    <div class="tool-card-header">
+                        <img src="Assets/logo.png" alt="" class="tool-icon">
+                        <span class="tool-name">wormtipede</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Darknet</span>
+                    <p class="tool-desc">Onion archiver that scrapes and archives crypto wallets, PGP keys, and emails from .onion sites.</p>
+                </div>
+
+                <div class="tool-card" data-name="noderat" data-source="almighty" data-category="darknet" data-desc="Tor-based search engine and recon using Ahmia, Torch, and NotEvil with blacklist verification.">
+                    <div class="tool-card-header">
+                        <img src="Assets/logo.png" alt="" class="tool-icon">
+                        <span class="tool-name">noderat</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Darknet</span>
+                    <p class="tool-desc">Tor-based search engine and recon using Ahmia, Torch, and NotEvil with blacklist verification.</p>
+                </div>
+
+                <div class="tool-card" data-name="fastarchv" data-source="almighty" data-category="darknet" data-desc="Tor-based site archiver that saves HTML content and technical metadata anonymously.">
+                    <div class="tool-card-header">
+                        <img src="Assets/logo.png" alt="" class="tool-icon">
+                        <span class="tool-name">fastarchv</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Darknet</span>
+                    <p class="tool-desc">Tor-based site archiver that saves HTML content and technical metadata anonymously.</p>
+                </div>
+
+                <div class="tool-card" data-name="blackhole" data-source="almighty" data-category="darknet" data-desc="Darkweb search engine aggregator and custom dork generator.">
+                    <div class="tool-card-header">
+                        <img src="Assets/logo.png" alt="" class="tool-icon">
+                        <span class="tool-name">blackhole</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Darknet</span>
+                    <p class="tool-desc">Darkweb search engine aggregator and custom dork generator.</p>
+                </div>
+
+                <div class="tool-card" data-name="hiddenosint" data-source="almighty" data-category="darknet" data-desc="Forensic-level intelligence gathering on Tor hidden services.">
+                    <div class="tool-card-header">
+                        <img src="Assets/logo.png" alt="" class="tool-icon">
+                        <span class="tool-name">hiddenosint</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Darknet</span>
+                    <p class="tool-desc">Forensic-level intelligence gathering on Tor hidden services.</p>
+                </div>
+
+                <div class="tool-card" data-name="torclawx" data-source="almighty" data-category="darknet" data-desc="Async spider for onion domains with robots.txt-compliant structural data collection.">
+                    <div class="tool-card-header">
+                        <img src="Assets/logo.png" alt="" class="tool-icon">
+                        <span class="tool-name">torclawx</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Darknet</span>
+                    <p class="tool-desc">Async spider for onion domains with robots.txt-compliant structural data collection.</p>
+                </div>
+
+                <div class="tool-card" data-name="torvester" data-source="almighty" data-category="darknet" data-desc="Systematic intelligence harvester that scrapes onion pages and builds databases.">
+                    <div class="tool-card-header">
+                        <img src="Assets/logo.png" alt="" class="tool-icon">
+                        <span class="tool-name">torvester</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Darknet</span>
+                    <p class="tool-desc">Systematic intelligence harvester that scrapes onion pages and builds databases.</p>
+                </div>
+
+                <div class="tool-card" data-name="oniextractor" data-source="almighty" data-category="darknet" data-desc="Extracts and analyzes links and domain relationships across the onion network.">
+                    <div class="tool-card-header">
+                        <img src="Assets/logo.png" alt="" class="tool-icon">
+                        <span class="tool-name">oniextractor</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Darknet</span>
+                    <p class="tool-desc">Extracts and analyzes links and domain relationships across the onion network.</p>
+                </div>
+
+                <!-- Forensics & Analysis -->
+                <div class="tool-card" data-name="ph000enix" data-source="almighty" data-category="phone" data-desc="Phone intelligence with carrier analysis, VoIP detection, disposable number checks, and pattern analysis.">
+                    <div class="tool-card-header">
+                        <img src="Assets/logo.png" alt="" class="tool-icon">
+                        <span class="tool-name">ph000enix</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Phone</span>
+                    <p class="tool-desc">Phone intelligence with carrier analysis, VoIP detection, disposable number checks, and pattern analysis.</p>
+                </div>
+
+                <div class="tool-card" data-name="fastcrypt" data-source="almighty" data-category="security" data-desc="GUI-based AES-256 (Fernet) file and folder encryption/decryption tool.">
+                    <div class="tool-card-header">
+                        <img src="Assets/logo.png" alt="" class="tool-icon">
+                        <span class="tool-name">fastcrypt</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Security</span>
+                    <p class="tool-desc">GUI-based AES-256 (Fernet) file and folder encryption/decryption tool.</p>
+                </div>
+
+                <div class="tool-card" data-name="stbreaker" data-source="almighty" data-category="forensics" data-desc="Steganography detector for images, audio, and archives.">
+                    <div class="tool-card-header">
+                        <img src="Assets/logo.png" alt="" class="tool-icon">
+                        <span class="tool-name">stbreaker</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Forensics</span>
+                    <p class="tool-desc">Steganography detector for images, audio, and archives.</p>
+                </div>
+
+                <div class="tool-card" data-name="imagexhunt" data-source="almighty" data-category="forensics" data-desc="Forensic image analyzer extracting technical specs, hash values, and EXIF data.">
+                    <div class="tool-card-header">
+                        <img src="Assets/logo.png" alt="" class="tool-icon">
+                        <span class="tool-name">imagexhunt</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Forensics</span>
+                    <p class="tool-desc">Forensic image analyzer extracting technical specs, hash values, and EXIF data.</p>
+                </div>
+
+                <div class="tool-card" data-name="videoxhunt" data-source="almighty" data-category="forensics" data-desc="Video stream, codec structure, and technical metadata forensic analysis module.">
+                    <div class="tool-card-header">
+                        <img src="Assets/logo.png" alt="" class="tool-icon">
+                        <span class="tool-name">videoxhunt</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Forensics</span>
+                    <p class="tool-desc">Video stream, codec structure, and technical metadata forensic analysis module.</p>
+                </div>
+
+                <div class="tool-card" data-name="videograb7" data-source="almighty" data-category="forensics" data-desc="Forensic video/audio/metadata download manager (yt-dlp based).">
+                    <div class="tool-card-header">
+                        <img src="Assets/logo.png" alt="" class="tool-icon">
+                        <span class="tool-name">videograb7</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Forensics</span>
+                    <p class="tool-desc">Forensic video/audio/metadata download manager (yt-dlp based).</p>
+                </div>
+
+                <div class="tool-card" data-name="metadeye" data-source="almighty" data-category="forensics" data-desc="EXIF and metadata extraction tool for files and documents.">
+                    <div class="tool-card-header">
+                        <img src="Assets/logo.png" alt="" class="tool-icon">
+                        <span class="tool-name">metadeye</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Forensics</span>
+                    <p class="tool-desc">EXIF and metadata extraction tool for files and documents.</p>
+                </div>
+
+                <div class="tool-card" data-name="usbfdf-iso" data-source="almighty" data-category="forensics" data-desc="Disk image and filesystem forensic examination module.">
+                    <div class="tool-card-header">
+                        <img src="Assets/logo.png" alt="" class="tool-icon">
+                        <span class="tool-name">usbfdf-iso</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Forensics</span>
+                    <p class="tool-desc">Disk image and filesystem forensic examination module.</p>
+                </div>
+
+                <div class="tool-card" data-name="deepchaintk" data-source="almighty" data-category="analysis" data-desc="Blockchain intelligence: crypto wallet risk analysis, mixing detection, and transaction tracking.">
+                    <div class="tool-card-header">
+                        <img src="Assets/logo.png" alt="" class="tool-icon">
+                        <span class="tool-name">deepchaintk</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Analysis</span>
+                    <p class="tool-desc">Blockchain intelligence: crypto wallet risk analysis, mixing detection, and transaction tracking.</p>
+                </div>
+
+                <!-- Isolation & Cleaning -->
+                <div class="tool-card" data-name="anti-tr4ce" data-source="almighty" data-category="privacy" data-desc="Forensic trace cleaner that permanently wipes logs, history, cache, and temp files.">
+                    <div class="tool-card-header">
+                        <img src="Assets/logo.png" alt="" class="tool-icon">
+                        <span class="tool-name">anti-tr4ce</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Privacy</span>
+                    <p class="tool-desc">Forensic trace cleaner that permanently wipes logs, history, cache, and temp files.</p>
+                </div>
+
+                <div class="tool-card" data-name="almighty-jails" data-source="almighty" data-category="security" data-desc="Firejail profile manager for running applications in isolated sandbox environments.">
+                    <div class="tool-card-header">
+                        <img src="Assets/logo.png" alt="" class="tool-icon">
+                        <span class="tool-name">almighty-jails</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Security</span>
+                    <p class="tool-desc">Firejail profile manager for running applications in isolated sandbox environments.</p>
+                </div>
+
+                <div class="tool-card" data-name="plaztek" data-source="almighty" data-category="security" data-desc="Bubblewrap-based lightweight security cages for untrusted scripts.">
+                    <div class="tool-card-header">
+                        <img src="Assets/logo.png" alt="" class="tool-icon">
+                        <span class="tool-name">plaztek</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Security</span>
+                    <p class="tool-desc">Bubblewrap-based lightweight security cages for untrusted scripts.</p>
+                </div>
+
+                <!-- Other Research -->
+                <div class="tool-card" data-name="raveilsec" data-source="almighty" data-category="emails" data-desc="Email and domain threat intelligence: SPF/DMARC, WHOIS, breach lookup, PGP discovery.">
+                    <div class="tool-card-header">
+                        <img src="Assets/logo.png" alt="" class="tool-icon">
+                        <span class="tool-name">raveilsec</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Emails</span>
+                    <p class="tool-desc">Email and domain threat intelligence: SPF/DMARC, WHOIS, breach lookup, PGP discovery.</p>
+                </div>
+
+                <div class="tool-card" data-name="shodaneye" data-source="almighty" data-category="domain/ip" data-desc="Shodan CLI for querying internet-connected device vulnerabilities.">
+                    <div class="tool-card-header">
+                        <span class="tool-name">shodaneye</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Domain/IP</span>
+                    <p class="tool-desc">Shodan CLI for querying internet-connected device vulnerabilities.</p>
+                </div>
+
+                <div class="tool-card" data-name="phointel" data-source="almighty" data-category="phone" data-desc="Phone number intelligence: carrier, country, and technical detail queries.">
+                    <div class="tool-card-header">
+                        <img src="Assets/logo.png" alt="" class="tool-icon">
+                        <span class="tool-name">phointel</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Phone</span>
+                    <p class="tool-desc">Phone number intelligence: carrier, country, and technical detail queries.</p>
+                </div>
+
+                <div class="tool-card" data-name="whosintapp" data-source="almighty" data-category="domain/ip" data-desc="Domain WHOIS and profile intelligence queries.">
+                    <div class="tool-card-header">
+                        <img src="Assets/logo.png" alt="" class="tool-icon">
+                        <span class="tool-name">whosintapp</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Domain/IP</span>
+                    <p class="tool-desc">Domain WHOIS and profile intelligence queries.</p>
+                </div>
+
+                <div class="tool-card" data-name="wh0xip" data-source="almighty" data-category="domain/ip" data-desc="Full IP address location and threat intelligence analysis module.">
+                    <div class="tool-card-header">
+                        <img src="Assets/logo.png" alt="" class="tool-icon">
+                        <span class="tool-name">wh0xip</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Domain/IP</span>
+                    <p class="tool-desc">Full IP address location and threat intelligence analysis module.</p>
+                </div>
+
+                <div class="tool-card" data-name="dorkseye" data-source="almighty" data-category="domain/ip" data-desc="Multi-engine automated dork search tool.">
+                    <div class="tool-card-header">
+                        <span class="tool-name">dorkseye</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Domain/IP</span>
+                    <p class="tool-desc">Multi-engine automated dork search tool.</p>
+                </div>
+
+                <div class="tool-card" data-name="drawasp99" data-source="almighty" data-category="analysis" data-desc="Search aggregator collecting URLs and content from Google, Bing, and DDG.">
+                    <div class="tool-card-header">
+                        <img src="Assets/logo.png" alt="" class="tool-icon">
+                        <span class="tool-name">drawasp99</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Analysis</span>
+                    <p class="tool-desc">Search aggregator collecting URLs and content from Google, Bing, and DDG.</p>
+                </div>
+
+                <div class="tool-card" data-name="fakeidgen" data-source="almighty" data-category="privacy" data-desc="Synthetic identity data generator for testing processes.">
+                    <div class="tool-card-header">
+                        <img src="Assets/logo.png" alt="" class="tool-icon">
+                        <span class="tool-name">fakeidgen</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Privacy</span>
+                    <p class="tool-desc">Synthetic identity data generator for testing processes.</p>
+                </div>
+
+                <div class="tool-card" data-name="crypted-notes" data-source="almighty" data-category="security" data-desc="AES-256 encrypted research note storage terminal tool.">
+                    <div class="tool-card-header">
+                        <img src="Assets/logo.png" alt="" class="tool-icon">
+                        <span class="tool-name">crypted-notes</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Security</span>
+                    <p class="tool-desc">AES-256 encrypted research note storage terminal tool.</p>
+                </div>
+
+                <!-- ============ KALI TOOLS ============ -->
+
+                <div class="tool-card" data-name="theharvester" data-source="kali" data-category="emails" data-desc="Email, subdomain, and IP aggregator from Google, Bing, and Shodan sources.">
+                    <div class="tool-card-header">
+                        <span class="tool-name">theharvester</span>
+                        <span class="tool-source kali">Kali</span>
+                    </div>
+                    <span class="tool-category">Emails</span>
+                    <p class="tool-desc">Email, subdomain, and IP aggregator from Google, Bing, and Shodan sources.</p>
+                </div>
+
+                <div class="tool-card" data-name="emailharvester" data-source="kali" data-category="emails" data-desc="Rapid email address scraper from various sources.">
+                    <div class="tool-card-header">
+                        <span class="tool-name">emailharvester</span>
+                        <span class="tool-source kali">Kali</span>
+                    </div>
+                    <span class="tool-category">Emails</span>
+                    <p class="tool-desc">Rapid email address scraper from various sources.</p>
+                </div>
+
+                <div class="tool-card" data-name="sherlock" data-source="kali" data-category="social media" data-desc="Username search across 300+ social media platforms.">
+                    <div class="tool-card-header">
+                        <span class="tool-name">sherlock</span>
+                        <span class="tool-source kali">Kali</span>
+                    </div>
+                    <span class="tool-category">Social Media</span>
+                    <p class="tool-desc">Username search across 300+ social media platforms.</p>
+                </div>
+
+                <div class="tool-card" data-name="spiderfoot" data-source="kali" data-category="framework" data-desc="Automated large-scale OSINT collection framework.">
+                    <div class="tool-card-header">
+                        <span class="tool-name">spiderfoot</span>
+                        <span class="tool-source kali">Kali</span>
+                    </div>
+                    <span class="tool-category">Framework</span>
+                    <p class="tool-desc">Automated large-scale OSINT collection framework.</p>
+                </div>
+
+                <div class="tool-card" data-name="maltego" data-source="kali" data-category="framework" data-desc="Graph-based link analysis tool for visualizing data relationships.">
+                    <div class="tool-card-header">
+                        <span class="tool-name">maltego</span>
+                        <span class="tool-source kali">Kali</span>
+                    </div>
+                    <span class="tool-category">Framework</span>
+                    <p class="tool-desc">Graph-based link analysis tool for visualizing data relationships.</p>
+                </div>
+
+                <div class="tool-card" data-name="recon-ng" data-source="kali" data-category="framework" data-desc="Modular web-based reconnaissance framework.">
+                    <div class="tool-card-header">
+                        <span class="tool-name">recon-ng</span>
+                        <span class="tool-source kali">Kali</span>
+                    </div>
+                    <span class="tool-category">Framework</span>
+                    <p class="tool-desc">Modular web-based reconnaissance framework.</p>
+                </div>
+
+                <div class="tool-card" data-name="dmitry" data-source="kali" data-category="domain/ip" data-desc="Domain WHOIS, subdomain, email, and port scanning recon tool.">
+                    <div class="tool-card-header">
+                        <span class="tool-name">dmitry</span>
+                        <span class="tool-source kali">Kali</span>
+                    </div>
+                    <span class="tool-category">Domain/IP</span>
+                    <p class="tool-desc">Domain WHOIS, subdomain, email, and port scanning recon tool.</p>
+                </div>
+
+                <div class="tool-card" data-name="sublist3r" data-source="kali" data-category="domain/ip" data-desc="Subdomain enumeration tool using multiple search engines.">
+                    <div class="tool-card-header">
+                        <span class="tool-name">sublist3r</span>
+                        <span class="tool-source kali">Kali</span>
+                    </div>
+                    <span class="tool-category">Domain/IP</span>
+                    <p class="tool-desc">Subdomain enumeration tool using multiple search engines.</p>
+                </div>
+
+                <div class="tool-card" data-name="amass" data-source="kali" data-category="domain/ip" data-desc="Asset discovery tool using active and passive techniques.">
+                    <div class="tool-card-header">
+                        <span class="tool-name">amass</span>
+                        <span class="tool-source kali">Kali</span>
+                    </div>
+                    <span class="tool-category">Domain/IP</span>
+                    <p class="tool-desc">Asset discovery tool using active and passive techniques.</p>
+                </div>
+
+                <div class="tool-card" data-name="sn0int" data-source="kali" data-category="framework" data-desc="Semi-automated OSINT framework and data manager.">
+                    <div class="tool-card-header">
+                        <span class="tool-name">sn0int</span>
+                        <span class="tool-source kali">Kali</span>
+                    </div>
+                    <span class="tool-category">Framework</span>
+                    <p class="tool-desc">Semi-automated OSINT framework and data manager.</p>
+                </div>
+
+                <div class="tool-card" data-name="h8mail" data-source="kali" data-category="emails" data-desc="Email breach and credential leak lookup tool.">
+                    <div class="tool-card-header">
+                        <span class="tool-name">h8mail</span>
+                        <span class="tool-source kali">Kali</span>
+                    </div>
+                    <span class="tool-category">Emails</span>
+                    <p class="tool-desc">Email breach and credential leak lookup tool.</p>
+                </div>
+
+                <div class="tool-card" data-name="cloud-enum" data-source="kali" data-category="network" data-desc="Scans for open resources on Google Cloud, AWS, and Azure.">
+                    <div class="tool-card-header">
+                        <span class="tool-name">cloud-enum</span>
+                        <span class="tool-source kali">Kali</span>
+                    </div>
+                    <span class="tool-category">Network</span>
+                    <p class="tool-desc">Scans for open resources on Google Cloud, AWS, and Azure.</p>
+                </div>
+
+                <div class="tool-card" data-name="maryam" data-source="kali" data-category="framework" data-desc="Python-based modular OSINT framework.">
+                    <div class="tool-card-header">
+                        <span class="tool-name">maryam</span>
+                        <span class="tool-source kali">Kali</span>
+                    </div>
+                    <span class="tool-category">Framework</span>
+                    <p class="tool-desc">Python-based modular OSINT framework.</p>
+                </div>
+
+                <div class="tool-card" data-name="hping3" data-source="kali" data-category="network" data-desc="TCP/IP packet generator and analyzer for network testing and firewall auditing.">
+                    <div class="tool-card-header">
+                        <span class="tool-name">hping3</span>
+                        <span class="tool-source kali">Kali</span>
+                    </div>
+                    <span class="tool-category">Network</span>
+                    <p class="tool-desc">TCP/IP packet generator and analyzer for network testing and firewall auditing.</p>
+                </div>
+
+                <div class="tool-card" data-name="fping" data-source="kali" data-category="network" data-desc="Parallel ICMP ping tool for scanning multiple hosts simultaneously.">
+                    <div class="tool-card-header">
+                        <span class="tool-name">fping</span>
+                        <span class="tool-source kali">Kali</span>
+                    </div>
+                    <span class="tool-category">Network</span>
+                    <p class="tool-desc">Parallel ICMP ping tool for scanning multiple hosts simultaneously.</p>
+                </div>
+
+                <div class="tool-card" data-name="unicornscan" data-source="kali" data-category="network" data-desc="Asynchronous network scanning and information gathering tool.">
+                    <div class="tool-card-header">
+                        <span class="tool-name">unicornscan</span>
+                        <span class="tool-source kali">Kali</span>
+                    </div>
+                    <span class="tool-category">Network</span>
+                    <p class="tool-desc">Asynchronous network scanning and information gathering tool.</p>
+                </div>
+
+                <div class="tool-card" data-name="netmask" data-source="kali" data-category="network" data-desc="IP address and subnet mask resolver utility.">
+                    <div class="tool-card-header">
+                        <span class="tool-name">netmask</span>
+                        <span class="tool-source kali">Kali</span>
+                    </div>
+                    <span class="tool-category">Network</span>
+                    <p class="tool-desc">IP address and subnet mask resolver utility.</p>
+                </div>
+
+                <div class="tool-card" data-name="p0f" data-source="kali" data-category="network" data-desc="Passive OS fingerprinting tool that identifies systems by analyzing network traffic.">
+                    <div class="tool-card-header">
+                        <span class="tool-name">p0f</span>
+                        <span class="tool-source kali">Kali</span>
+                    </div>
+                    <span class="tool-category">Network</span>
+                    <p class="tool-desc">Passive OS fingerprinting tool that identifies systems by analyzing network traffic.</p>
+                </div>
+
+                <div class="tool-card" data-name="dnsrecon" data-source="kali" data-category="domain/ip" data-desc="DNS reconnaissance and brute-force enumeration tool.">
+                    <div class="tool-card-header">
+                        <span class="tool-name">dnsrecon</span>
+                        <span class="tool-source kali">Kali</span>
+                    </div>
+                    <span class="tool-category">Domain/IP</span>
+                    <p class="tool-desc">DNS reconnaissance and brute-force enumeration tool.</p>
+                </div>
+
+                <div class="tool-card" data-name="dnsenum" data-source="kali" data-category="domain/ip" data-desc="DNS zone transfer, MX, and record enumeration tool.">
+                    <div class="tool-card-header">
+                        <span class="tool-name">dnsenum</span>
+                        <span class="tool-source kali">Kali</span>
+                    </div>
+                    <span class="tool-category">Domain/IP</span>
+                    <p class="tool-desc">DNS zone transfer, MX, and record enumeration tool.</p>
+                </div>
+
+                <div class="tool-card" data-name="dnsmap" data-source="kali" data-category="domain/ip" data-desc="Subdomain brute-force discovery tool.">
+                    <div class="tool-card-header">
+                        <span class="tool-name">dnsmap</span>
+                        <span class="tool-source kali">Kali</span>
+                    </div>
+                    <span class="tool-category">Domain/IP</span>
+                    <p class="tool-desc">Subdomain brute-force discovery tool.</p>
+                </div>
+
+                <div class="tool-card" data-name="whatweb" data-source="kali" data-category="domain/ip" data-desc="Web technology identification scanner.">
+                    <div class="tool-card-header">
+                        <span class="tool-name">whatweb</span>
+                        <span class="tool-source kali">Kali</span>
+                    </div>
+                    <span class="tool-category">Domain/IP</span>
+                    <p class="tool-desc">Web technology identification scanner.</p>
+                </div>
+
+                <div class="tool-card" data-name="photon" data-source="kali" data-category="domain/ip" data-desc="Web crawler that extracts URLs, emails, social accounts, and files.">
+                    <div class="tool-card-header">
+                        <span class="tool-name">photon</span>
+                        <span class="tool-source kali">Kali</span>
+                    </div>
+                    <span class="tool-category">Domain/IP</span>
+                    <p class="tool-desc">Web crawler that extracts URLs, emails, social accounts, and files.</p>
+                </div>
+
+                <div class="tool-card" data-name="pdfid" data-source="kali" data-category="forensics" data-desc="Scans PDF files for suspicious elements and embedded objects.">
+                    <div class="tool-card-header">
+                        <span class="tool-name">pdfid</span>
+                        <span class="tool-source kali">Kali</span>
+                    </div>
+                    <span class="tool-category">Forensics</span>
+                    <p class="tool-desc">Scans PDF files for suspicious elements and embedded objects.</p>
+                </div>
+
+                <div class="tool-card" data-name="pdf-parser" data-source="kali" data-category="forensics" data-desc="Technical PDF internal structure analysis tool.">
+                    <div class="tool-card-header">
+                        <span class="tool-name">pdf-parser</span>
+                        <span class="tool-source kali">Kali</span>
+                    </div>
+                    <span class="tool-category">Forensics</span>
+                    <p class="tool-desc">Technical PDF internal structure analysis tool.</p>
+                </div>
+
+                <div class="tool-card" data-name="metagoofil" data-source="kali" data-category="forensics" data-desc="Document metadata extraction tool for domain-targeted file discovery.">
+                    <div class="tool-card-header">
+                        <span class="tool-name">metagoofil</span>
+                        <span class="tool-source kali">Kali</span>
+                    </div>
+                    <span class="tool-category">Forensics</span>
+                    <p class="tool-desc">Document metadata extraction tool for domain-targeted file discovery.</p>
+                </div>
+
+                <div class="tool-card" data-name="inspy" data-source="kali" data-category="social media" data-desc="LinkedIn technology-focused reconnaissance tool.">
+                    <div class="tool-card-header">
+                        <span class="tool-name">inspy</span>
+                        <span class="tool-source kali">Kali</span>
+                    </div>
+                    <span class="tool-category">Social Media</span>
+                    <p class="tool-desc">LinkedIn technology-focused reconnaissance tool.</p>
+                </div>
+
+                <div class="tool-card" data-name="osrframework" data-source="kali" data-category="social media" data-desc="Modular username and profile search toolset.">
+                    <div class="tool-card-header">
+                        <span class="tool-name">osrframework</span>
+                        <span class="tool-source kali">Kali</span>
+                    </div>
+                    <span class="tool-category">Social Media</span>
+                    <p class="tool-desc">Modular username and profile search toolset.</p>
+                </div>
+
+                <div class="tool-card" data-name="email2phonenumber" data-source="kali" data-category="phone" data-desc="Email-to-phone number leak discovery tool.">
+                    <div class="tool-card-header">
+                        <span class="tool-name">email2phonenumber</span>
+                        <span class="tool-source kali">Kali</span>
+                    </div>
+                    <span class="tool-category">Phone</span>
+                    <p class="tool-desc">Email-to-phone number leak discovery tool.</p>
+                </div>
+
+                <div class="tool-card" data-name="enum4linux" data-source="kali" data-category="network" data-desc="SMB enumeration and information gathering tool.">
+                    <div class="tool-card-header">
+                        <span class="tool-name">enum4linux</span>
+                        <span class="tool-source kali">Kali</span>
+                    </div>
+                    <span class="tool-category">Network</span>
+                    <p class="tool-desc">SMB enumeration and information gathering tool.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="Assets/logo.png" alt="Almighty Linux" class="footer-logo">
+                    <span class="footer-name">ALMIGHTY LINUX</span>
+                </div>
+                <div class="footer-slogan">
+                    <span>&gt;_</span> The distro for those who can see everything
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Overview</a>
+                    <a href="tools.html">Tools</a>
+                    <a href="docs.html">Docs</a>
+                    <a href="download.html">Download</a>
+                </div>
+                <div class="footer-bottom">
+                    <p>Developed by <a href="https://nixovena.org" target="_blank" rel="noopener">Nixovena Labs</a> &mdash; <a href="https://nixovena.org" target="_blank" rel="noopener">nixovena.org</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

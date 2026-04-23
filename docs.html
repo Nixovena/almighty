@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Almighty Linux Documentation — Installation, configuration, hardening details, and usage guide.">
+    <title>Documentation — Almighty Linux</title>
+    <link rel="icon" href="Assets/logo.png" type="image/png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="Assets/logo.png" alt="Almighty Linux">
+                <span>ALMIGHTY</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Overview</a></li>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="docs.html" class="active">Docs</a></li>
+                <li><a href="releases.html">Releases</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="download.html">Download</a></li>
+                <li><a href="osint-sources.html">OSINT Sources</a></li>
+                <li><a href="newsletter.html">Newsletter</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-hero">
+        <h1><span class="text-red">Documentation</span></h1>
+        <p>Everything you need to get started with Almighty Linux.</p>
+    </section>
+
+    <section class="section" style="padding-top: 20px;">
+        <div class="container">
+            <div class="docs-layout">
+
+                <!-- Sidebar -->
+                <aside class="docs-sidebar">
+                    <ul class="docs-nav">
+                        <li><a href="#introduction" class="active">Introduction</a></li>
+                        <li><a href="#technical-details">Technical Details</a></li>
+                        <li><a href="#warnings">Warnings</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#known-issues">Known Issues</a></li>
+                        <li><a href="#hardening">Hardening</a></li>
+                        <li><a href="#download-verify">ISO Download & Verification</a></li>
+                        <li><a href="#usb-writing">USB Writing</a></li>
+                        <li><a href="#booting">Booting</a></li>
+                        <li><a href="#installation">Installation</a></li>
+                        <li><a href="#basic-usage">Basic Usage</a></li>
+                        <li><a href="#almighty-browser">Almighty OSINT Browser</a></li>
+                        <li><a href="#cool-tools">Cool Tools</a></li>
+                        <li><a href="#commands">Commands</a></li>
+                        <li><a href="#faq">FAQ's</a></li>
+                        <li><a href="#bug-reports">Bug Reports</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </aside>
+
+                <!-- Content -->
+                <div class="docs-content">
+
+                    <!-- Introduction -->
+                    <div class="docs-section" id="introduction">
+                        <h2>Introduction</h2>
+                        <p>Almighty Linux is a hybrid Linux distribution based on <strong>Debian Testing</strong> and
+                            <strong>Kali Linux</strong>, purpose-built for intelligence gathering and OSINT (Open Source
+                            Intelligence) operations.
+                        </p>
+                        <p>The distribution ships with an extensive collection of <strong>79 security and OSINT
+                                tools</strong>, including 58 custom-built scripts developed exclusively for Almighty
+                            Linux and 32 industry-standard packages from the Kali repositories. It features a hardened
+                            kernel tuning profile and a comprehensive suite of anonymity, trace-cleaning, isolation, and
+                            security tools to maintain operational security during intelligence operations.</p>
+                        <p>Almighty Linux also includes the <strong>Almighty OSINT Browser</strong> — a custom
+                            Chromium-based browser with integrated OSINT utilities and user-agent spoofing capabilities.
+                            The distribution uses <strong>MATE</strong> as its desktop environment, providing a
+                            lightweight and professional workspace for extended investigation sessions.</p>
+                    </div>
+
+                    <!-- Technical Details -->
+                    <div class="docs-section" id="technical-details">
+                        <h2>Technical Details</h2>
+                        <table class="docs-table">
+                            <thead>
+                                <tr>
+                                    <th>Property</th>
+                                    <th>Value</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Almighty Linux</td>
+                                </tr>
+                                <tr>
+                                    <td>Base</td>
+                                    <td>Debian Testing / Kali Linux (Hybrid)</td>
+                                </tr>
+                                <tr>
+                                    <td>Desktop Environment</td>
+                                    <td>MATE</td>
+                                </tr>
+                                <tr>
+                                    <td>Architecture</td>
+                                    <td>x86_64 (amd64)</td>
+                                </tr>
+                                <tr>
+                                    <td>Kernel</td>
+                                    <td>Vanilla(Hardened Tuning)</td>
+                                </tr>
+                                <tr>
+                                    <td>Init System</td>
+                                    <td>systemd</td>
+                                </tr>
+                                <tr>
+                                    <td>Package Manager</td>
+                                    <td>APT (dpkg)</td>
+                                </tr>
+                                <tr>
+                                    <td>Installer</td>
+                                    <td>Calamares</td>
+                                </tr>
+                                <tr>
+                                    <td>Default Shell</td>
+                                    <td>Bash</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Warnings -->
+                    <div class="docs-section" id="warnings">
+                        <h2>Warnings</h2>
+
+                        <div class="info-box danger">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+                                <line x1="12" y1="9" x2="12" y2="13" />
+                                <line x1="12" y1="17" x2="12.01" y2="17" />
+                            </svg>
+                            <div>
+                                <strong>Legal Disclaimer</strong><br>
+                                Almighty Linux is intended solely for lawful security research, authorized penetration
+                                testing, and educational purposes. Any unauthorized use of the tools included in this
+                                distribution against systems you do not own or have explicit permission to test is
+                                strictly prohibited and may violate local, national, and international laws. The
+                                developers assume no liability for misuse.
+                            </div>
+                        </div>
+
+                        <div class="info-box warning">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <line x1="12" y1="8" x2="12" y2="12" />
+                                <line x1="12" y1="16" x2="12.01" y2="16" />
+                            </svg>
+                            <div>
+                                <strong>Disclaimer of Liability</strong><br>
+                                This software is provided "as is" without warranty of any kind, express or implied. The
+                                developers are not responsible for any damage, data loss, legal issues, or other
+                                consequences arising from the use or misuse of this distribution.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Features -->
+                    <div class="docs-section" id="features">
+                        <h2>Features</h2>
+                        <h3>Intelligence Toolset</h3>
+                        <ul>
+                            <li><strong>90+ Tools:</strong> 58 custom Almighty scripts + 32 Kali repository packages
+                            </li>
+                            <li><strong>OSINT Frameworks:</strong> Multi-module platforms (5piderx, near2h4ck,
+                                osintripper)</li>
+                            <li><strong>Social Intelligence:</strong> Facebook, TikTok, YouTube, LinkedIn, Telegram,
+                                GitHub, ProtonMail profilers</li>
+                            <li><strong>Dark Web Reconnaissance:</strong> 8 dedicated onion network tools for archiving,
+                                crawling, and intelligence extraction</li>
+                            <li><strong>Digital Forensics:</strong> Image/video analysis, steganography detection,
+                                blockchain intelligence, file encryption</li>
+                        </ul>
+
+                        <h3>OSINT Browser</h3>
+                        <ul>
+                            <li>Custom Chromium-based browser with built-in fingerprint protection</li>
+                            <li>Canvas, WebGL, and AudioContext spoofing to prevent identity leaks</li>
+                            <li>WebRTC blocking and User-Agent rotation</li>
+                            <li>Integrated OSINT utilities: Base64, CIDR calculator, Email validator, Link extractor
+                            </li>
+                        </ul>
+
+                        <h3>Operational Security</h3>
+                        <ul>
+                            <li>Tor traffic routing (anonroute)</li>
+                            <li>MAC address randomization (change-mac)</li>
+                            <li>Hostname spoofing (anonhost)</li>
+                            <li>Forensic trace cleaning (anti-tr4ce)</li>
+                            <li>Application isolation (almighty-jails, plaztek)</li>
+                            <li>DNS changer for censorship bypass</li>
+                        </ul>
+
+                        <h3>Desktop Environment</h3>
+                        <ul>
+                            <li>MATE desktop with custom theming</li>
+                            <li>Conky system monitors with auto-anchor</li>
+                            <li>Branded terminal splash screens</li>
+                        </ul>
+                    </div>
+
+                    <!-- Known Issues -->
+                    <div class="docs-section" id="known-issues">
+                        <h2>Known Issues</h2>
+
+                        <div class="info-box warning">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <line x1="12" y1="8" x2="12" y2="12" />
+                                <line x1="12" y1="16" x2="12.01" y2="16" />
+                            </svg>
+                            <div>
+                                <strong>Hybrid Distribution Conflicts</strong><br>
+                                As a hybrid distribution combining Debian Testing and Kali Linux repositories, package
+                                conflicts may occur. Some packages from different repositories may have version
+                                mismatches or dependency conflicts. Advanced package management knowledge is
+                                recommended.
+                            </div>
+                        </div>
+
+                        <div class="info-box warning">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <line x1="12" y1="8" x2="12" y2="12" />
+                                <line x1="12" y1="16" x2="12.01" y2="16" />
+                            </svg>
+                            <div>
+                                <strong>Testing Base Instability</strong><br>
+                                Since Almighty Linux is based on Debian Testing, the system may experience breakages
+                                during updates. Rolling updates can introduce regressions or temporary
+                                incompatibilities. It is recommended to review changelogs before major updates.
+                            </div>
+                        </div>
+
+                        <ul>
+                            <li><strong>Repository Conflicts:</strong> Kali and Debian Testing packages may occasionally
+                                conflict during <code>apt upgrade</code>. Pin priorities are configured, but manual
+                                resolution may be needed.</li>
+                            <li><strong>Tool Compatibility:</strong> Some third-party tools may have dependency issues
+                                due to the hybrid package base.</li>
+                            <li><strong>Kernel Updates:</strong> Custom kernel parameters in GRUB may need to be
+                                re-applied after kernel updates.</li>
+                            <li><strong>GPU Drivers:</strong> Proprietary GPU drivers may require manual installation
+                                due to the Testing base.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Hardening -->
+                    <div class="docs-section" id="hardening">
+                        <h2>Hardening Details</h2>
+                        <p>Almighty Linux adopts a "Security by Default" philosophy, providing multi-layered protection
+                            from the kernel to the application layer.</p>
+
+                        <h3>1. Kernel & Boot Security</h3>
+                        <p>Critical parameters injected via <code>/etc/default/grub.d/40_hardened.cfg</code>:</p>
+                        <ul>
+                            <li><strong>Memory Sanitization:</strong> <code>init_on_alloc=1</code> and
+                                <code>init_on_free=1</code> — memory is zeroed on allocation and deallocation,
+                                preventing use-after-free attacks.
+                            </li>
+                            <li><strong>ASLR & Stack Protection:</strong> <code>page_alloc.shuffle=1</code> and
+                                <code>randomize_kstack_offset=on</code> — memory layout is randomized.
+                            </li>
+                            <li><strong>Side-Channel Protection:</strong> <code>mitigations=full</code> — maximum
+                                patches against Spectre, Meltdown, L1TF, MDS, and related CPU vulnerabilities.</li>
+                            <li><strong>Debug Blocking:</strong> <code>debugfs=off</code> — kernel debug filesystem
+                                access disabled.</li>
+                            <li><strong>Physical Security:</strong> <code>rd.shell=0</code> and
+                                <code>rd.emergency=halt</code> — emergency shell access on boot failure is blocked;
+                                system halts instead.
+                            </li>
+                        </ul>
+
+                        <h3>2. Runtime Security: Sysctl</h3>
+                        <p>The <code>/etc/sysctl.d/sysctl.conf</code> file fundamentally modifies kernel runtime
+                            behavior:</p>
+                        <ul>
+                            <li><strong>Stealth & Restriction:</strong> <code>kptr_restrict=2</code> and
+                                <code>dmesg_restrict=1</code> — kernel addresses and logs hidden from unprivileged
+                                users.
+                            </li>
+                            <li><strong>PTrace Protection:</strong> <code>yama.ptrace_scope=3</code> — process tracing
+                                and code injection completely forbidden (including debugger usage).</li>
+                            <li><strong>BPF Hardening:</strong> <code>unprivileged_bpf_disabled=1</code> and
+                                <code>net.core.bpf_jit_harden=2</code> — advanced BPF JIT compiler attacks blocked.
+                            </li>
+                            <li><strong>Network Layer:</strong> IP forwarding disabled, spoofing protection
+                                (<code>rp_filter</code>) enabled, ICMP redirects disabled.</li>
+                            <li><strong>Filesystem:</strong> Symlink and hardlink creation rules hardened to prevent
+                                race-condition exploits.</li>
+                        </ul>
+
+                        <h3>3. Kernel Module Hardening</h3>
+                        <p>Unused or insecure drivers are blocked under <code>/etc/modprobe.d/</code>:</p>
+                        <ul>
+                            <li><strong>Legacy Protocols:</strong> AppleTalk, IPX, ATM, CAN Bus, DECnet disabled via
+                                <code>/bin/false</code>.
+                            </li>
+                            <li><strong>Obsolete Devices:</strong> Floppy, Firewire, and legacy NIC drivers blocked.
+                            </li>
+                            <li><strong>Bluetooth:</strong> Protocol-level restrictions applied.</li>
+                            <li><strong>Hardware Noise:</strong> PC Speaker disabled to prevent acoustic side-channels.
+                            </li>
+                        </ul>
+
+                        <h3>4. File System & Permission Management</h3>
+                        <p>Almighty Linux enforces the "Least Privilege" principle across the file hierarchy:</p>
+                        <ul>
+                            <li><strong>Global UMASK:</strong> Default umask set to <code>027</code> via
+                                <code>/etc/profile.d/hardening.sh</code>, preventing other users from reading newly
+                                created files.
+                            </li>
+                            <li><strong>Sudo Security:</strong> UMASK policy enforced during sudo operations
+                                (<code>umask_override</code>).</li>
+                            <li><strong>Permission Hardening Service:</strong> <code>permission-hardening.service</code>
+                                runs on every boot, verifying and correcting permissions on critical files.</li>
+                        </ul>
+
+                        <table class="docs-table">
+                            <thead>
+                                <tr>
+                                    <th>File / Directory</th>
+                                    <th>Permission</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>/etc/shadow</code></td>
+                                    <td>600</td>
+                                    <td>Only root can read password hashes.</td>
+                                </tr>
+                                <tr>
+                                    <td><code>/etc/sudoers</code></td>
+                                    <td>440</td>
+                                    <td>Prevents unauthorized privilege escalation.</td>
+                                </tr>
+                                <tr>
+                                    <td><code>/root</code></td>
+                                    <td>700</td>
+                                    <td>Root home directory fully isolated.</td>
+                                </tr>
+                                <tr>
+                                    <td><code>/etc/cron.*</code></td>
+                                    <td>755</td>
+                                    <td>Prevents scheduled task manipulation.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h3>5. Application Security: APT Sandbox</h3>
+                        <p>The <code>/etc/apt/apt.conf.d/40sandbox</code> configuration runs package download and
+                            installation processes in a restricted sandbox. This ensures that a potential vulnerability
+                            in the package manager cannot compromise the entire system.</p>
+                    </div>
+
+                    <!-- Download & Verify -->
+                    <div class="docs-section" id="download-verify">
+                        <h2>ISO Download & Verification</h2>
+                        <p>Download the latest Almighty Linux ISO from the <a href="download.html">Download</a> page.
+                        </p>
+
+                        <h3>SHA256 Verification</h3>
+                        <p>After downloading the ISO, verify its integrity using the provided SHA256 checksum:</p>
+                        <pre><code>sha256sum almighty-linux-1.0-beta-amd64.iso</code></pre>
+                        <p>Compare the output with the checksum provided on the download page. If they match, the file
+                            is intact and unmodified.</p>
+                    </div>
+
+                    <!-- USB Writing -->
+                    <div class="docs-section" id="usb-writing">
+                        <h2>USB Writing</h2>
+                        <p>You can write the ISO to a USB drive using any of the following methods:</p>
+
+                        <h3>dd (Linux / macOS)</h3>
+                        <div class="info-box danger">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+                                <line x1="12" y1="9" x2="12" y2="13" />
+                                <line x1="12" y1="17" x2="12.01" y2="17" />
+                            </svg>
+                            <div><strong>Warning:</strong> The <code>dd</code> command will erase ALL data on the target
+                                device. Double-check the device path before executing.</div>
+                        </div>
+                        <pre><code>sudo dd if=almighty-linux-1.0-beta-amd64.iso of=/dev/sdX bs=4M status=progress && sync</code></pre>
+                        <p>Replace <code>/dev/sdX</code> with your USB device path (e.g., <code>/dev/sdb</code>). Use
+                            <code>lsblk</code> to identify the correct device.
+                        </p>
+
+                        <h3>Ventoy</h3>
+                        <ol>
+                            <li>Download and install <a href="https://www.ventoy.net" target="_blank"
+                                    rel="noopener">Ventoy</a> on your USB drive.</li>
+                            <li>Copy the Almighty Linux ISO file to the Ventoy partition.</li>
+                            <li>Boot from the USB and select the ISO from the Ventoy menu.</li>
+                        </ol>
+
+                        <h3>Rufus (Windows)</h3>
+                        <ol>
+                            <li>Download <a href="https://rufus.ie" target="_blank" rel="noopener">Rufus</a>.</li>
+                            <li>Select your USB device and the Almighty Linux ISO.</li>
+                            <li>Use <strong>DD Image</strong> mode for best compatibility.</li>
+                            <li>Click Start and wait for the process to complete.</li>
+                        </ol>
+                    </div>
+
+                    <!-- Booting -->
+                    <div class="docs-section" id="booting">
+                        <h2>Booting</h2>
+                        <ol>
+                            <li>Insert the prepared USB drive into the target machine.</li>
+                            <li>Enter the BIOS/UEFI firmware settings (typically via F2, F12, DEL, or ESC during POST).
+                            </li>
+                            <li>Set the USB drive as the primary boot device or use the one-time boot menu.</li>
+                            <li>Save settings and reboot.</li>
+                            <li>The Almighty Linux boot menu will appear. Select <strong>Live</strong> to try the system
+                                without installation.</li>
+                        </ol>
+                    </div>
+
+                    <!-- Installation -->
+                    <div class="docs-section" id="installation">
+                        <h2>Calamares Installation</h2>
+                        <p>Almighty Linux uses the <strong>Calamares</strong> graphical installer for a straightforward
+                            installation experience.</p>
+                        <ol>
+                            <li>Boot into the live environment.</li>
+                            <li>Launch the <strong>Install Almighty Linux</strong> shortcut from the desktop or
+                                application menu.</li>
+                            <li>Follow the guided steps:
+                                <ul>
+                                    <li><strong>Language & Locale:</strong> Select your preferred language and region.
+                                    </li>
+                                    <li><strong>Keyboard:</strong> Choose your keyboard layout.</li>
+                                    <li><strong>Partitioning:</strong> Select automatic (erase disk) or manual
+                                        partitioning.</li>
+                                    <li><strong>User Setup:</strong> Create your username and password.</li>
+                                    <li><strong>Summary:</strong> Review your selections.</li>
+                                </ul>
+                            </li>
+                            <li>Click <strong>Install</strong> and wait for the process to complete.</li>
+                            <li>Reboot and remove the USB drive.</li>
+                        </ol>
+                        <div class="info-box info">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <line x1="12" y1="16" x2="12" y2="12" />
+                                <line x1="12" y1="8" x2="12.01" y2="8" />
+                            </svg>
+                            <div><strong>Tip:</strong> For dual-boot setups, use manual partitioning and ensure you have
+                                a dedicated partition for Almighty Linux. GRUB will automatically detect other operating
+                                systems.</div>
+                        </div>
+                    </div>
+
+                    <!-- Basic Usage -->
+                    <div class="docs-section" id="basic-usage">
+                        <h2>Basic Usage</h2>
+                        <h3>Running Tools</h3>
+                        <p>All Almighty custom tools are installed in <code>/usr/local/bin</code> and can be invoked
+                            directly from the terminal:</p>
+                        <pre><code># Run a tool with --help for usage information
+5piderx --help
+osintripper --help
+wormtipede --help
+
+# Example: Scan a username across platforms
+osintripper -u targetuser
+
+# Example: Route traffic through Tor
+sudo anonroute start
+
+# Example: Clean forensic traces
+sudo anti-tr4ce</code></pre>
+
+
+
+                        <h3>System Updates</h3>
+                        <pre><code>sudo update </code></pre>
+                        <div class="info-box warning">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <line x1="12" y1="8" x2="12" y2="12" />
+                                <line x1="12" y1="16" x2="12.01" y2="16" />
+                            </svg>
+                            <div><strong>Caution:</strong> Due to the hybrid Debian Testing / Kali base, review package
+                                changes carefully before confirming upgrades. Snapshot your system if possible.</div>
+                        </div>
+                    </div>
+
+
+                    <!-- Almighty OSINT Browser -->
+                    <div class="docs-section" id="almighty-browser">
+                        <h2>Almighty OSINT Browser</h2>
+                        <div class="info-box warning">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+                            </svg>
+                            <div>
+                                <strong>Status: Alpha/Development</strong><br>
+                                Currently in Alpha/Development stage. Not suitable for critical tasks. Some security/privacy features may not function correctly. Use with a Tor router for maximum security.
+                            </div>
+                        </div>
+                        
+                        <p>A browser developed from scratch based on Chromium / PyQt6 Web Engine. It features built-in OSINT tools and a wide range of user agents.</p>
+                    </div>
+
+                    <!-- Cool Tools -->
+                    <div class="docs-section" id="cool-tools">
+                        <h2>Cool Tools</h2>
+                        <p>Almighty Linux includes a collection of ASCII art terminal splash screens. These can be run
+                            as commands to display themed terminal logos:</p>
+
+                        <table class="docs-table">
+                            <thead>
+                                <tr>
+                                    <th>Command</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>anon</code></td>
+                                    <td>Anonymity-themed terminal splash logo</td>
+                                </tr>
+                                <tr>
+                                    <td><code>eye</code></td>
+                                    <td>Eye-figured terminal splash logo</td>
+                                </tr>
+                                <tr>
+                                    <td><code>katana</code></td>
+                                    <td>Katana-figured terminal splash logo</td>
+                                </tr>
+                                <tr>
+                                    <td><code>raven1</code></td>
+                                    <td>Raven-themed terminal splash logo (v1)</td>
+                                </tr>
+                                <tr>
+                                    <td><code>raven2</code></td>
+                                    <td>Raven-themed terminal splash logo (v2)</td>
+                                </tr>
+                                <tr>
+                                    <td><code>skull</code></td>
+                                    <td>Skull-figured terminal splash logo</td>
+                                </tr>
+                                <tr>
+                                    <td><code>skull2</code></td>
+                                    <td>Alternative skull-figured terminal splash logo</td>
+                                </tr>
+                                <tr>
+                                    <td><code>wing</code></td>
+                                    <td>Wing-figured terminal splash logo</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <p>Run any command in the terminal to display the corresponding ASCII art:</p>
+                        <pre><code>$ skull
+$ raven1
+$ eye</code></pre>
+                    </div>
+
+                    <!-- Commands -->
+                    <div class="docs-section" id="commands">
+                        <h2>Commands</h2>
+                        <p>System utility commands bundled with Almighty Linux:</p>
+
+                        <table class="docs-table">
+                            <thead>
+                                <tr>
+                                    <th>Command</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>almighty-panel</code></td>
+                                    <td>System management panel for Almighty Linux configuration and administration.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><code>almighty-fetch</code></td>
+                                    <td>ASCII system information display (neofetch-style) with Almighty branding.</td>
+                                </tr>
+                                <tr>
+                                    <td><code>flatpak-setup</code></td>
+                                    <td>Flatpak installation and configuration script.</td>
+                                </tr>
+                                <tr>
+                                    <td><code>mullvad-installer</code></td>
+                                    <td>Mullvad Browser and VPN installation script.</td>
+                                </tr>
+                                <tr>
+                                    <td><code>update</code></td>
+                                    <td>System update script for upgrading all packages.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <pre><code># Run the system panel
+$ almighty-panel
+
+# Show system info
+$ almighty-fetch
+
+# Update system
+$ sudo update</code></pre>
+                    </div>
+
+
+
+                    <!-- FAQ -->
+                    <div class="docs-section" id="faq">
+                        <h2>Frequently Asked Questions</h2>
+                        
+                        <div class="faq-item">
+                            <h3>What is the base of Almighty Linux?</h3>
+                            <p>Almighty Linux is a hybrid structure based on Debian Testing and Kali Linux.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3>What distinguishes Almighty Linux from others?</h3>
+                            <p>It comes with many custom-developed OSINT tools, advanced OpSec (Operational Security) modules, specially configured browsers, and performance/security-oriented Hardened Kernel tunings.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3>What is a hybrid operating system?</h3>
+                            <p>It refers to systems using the base of two different distributions together. Almighty Linux provides a wide scope for the user by utilizing the stability of Debian and the comprehensive tool library of Kali simultaneously.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3>Does the distribution have its own repository?</h3>
+                            <p>No. For security reasons and to minimize maintenance overhead, it does not use its own repository system; it draws directly from Debian and Kali repositories.</p>
+                            <p>The system receives regular updates for security and Kali tools.</p>
+                            <p>The currency of custom Almighty tools is ensured through periodically released 'Major Update' ISOs. This is a deliberate decision taken to preserve system stability.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3>What is the desktop environment?</h3>
+                            <p>MATE. It offers a fast, high-performance, and visually optimized experience.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3>What is included in the system?</h3>
+                            <ul>
+                                <li><strong>Digital Trackers:</strong> Deep information gathering tools via usernames, emails, or images.</li>
+                                <li><strong>Visual Analysis:</strong> Special software mapping social media networks and data connections.</li>
+                                <li><strong>Privacy Shield:</strong> Security layers concealing identity during scanning and analysis processes.</li>
+                            </ul>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3>New to cybersecurity; is it suitable?</h3>
+                            <p>Probably not. The distribution requires basic/intermediate level Linux and cybersecurity knowledge.</p>
+                            <p>Potential conflicts or breakages due to the Testing base and hybrid structure may occur.</p>
+                            <p>Furthermore, most tools are not graphical user interface (GUI) based; they rely on traditional terminal/parameter usage.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3>Why the name Almighty Linux? What is its meaning?</h3>
+                            <p>The name is derived from "The Almighty" ability possessed by the legendary character Yhwach from the <em>Bleach</em> anime. Yhwach's ability allows seeing all future possibilities. As an OSINT distribution, Almighty Linux has been developed with the philosophy of making all scattered data and hidden connections on the internet "visible."</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3>Submission of custom tools by developers?</h3>
+                            <p>Yes, conditions:</p>
+                            <ul>
+                                <li><strong>Languages:</strong> Only tools written in C, Python, Go, Bash, and Perl are accepted (for integration and analysis ease).</li>
+                                <li><strong>Security:</strong> Tools must be submitted as source code, not packaged (deb, tar.gz).</li>
+                                <li><strong>Quality:</strong> Projects that are non-functional, overly simple, easily broken, or copies of existing tools are not accepted.</li>
+                                <li><strong>Review:</strong> Submitted tools are tested in Sandbox/VM environments and additionally analyzed by models such as Claude Opus.</li>
+                            </ul>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3>How to contact?</h3>
+                            <p>This distribution is under the management of Nixovena Labs. For questions, bug reports, or collaborations: <a href="https://nixovena.org/contact" target="_blank" rel="noopener">nixovena.org/contact</a></p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3>How did this distribution emerge?</h3>
+                            <p>The first version was built in early 2025. It originated as a personal project based on Debian/Parrot but was shelved for a period. When rediscovered in the archives, the core structure was found too powerful to be wasted; the base was updated with Kali and the decision was made to open it to the community.</p>
+                        </div>
+
+                    </div>
+
+                    <!-- Bug Reports -->
+                    <div class="docs-section" id="bug-reports">
+                        <h2>Bug Reports</h2>
+                        <p>Found a bug or unexpected behavior? Please report it through our contact portal:</p>
+                        <p><a href="https://nixovena.org/contact" target="_blank" rel="noopener"
+                                class="btn btn-secondary" style="display: inline-flex;">Report a Bug</a></p>
+                        <p>When reporting, please include:</p>
+                        <ul>
+                            <li>Almighty Linux version and kernel version (<code>uname -a</code>)</li>
+                            <li>Steps to reproduce the issue</li>
+                            <li>Relevant terminal output or error messages</li>
+                            <li>Hardware specifications if relevant</li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact -->
+                    <div class="docs-section" id="contact">
+                        <h2>Contact</h2>
+                        <p>For general inquiries, collaboration proposals, or support requests:</p>
+                        <p><a href="https://nixovena.org/contact" target="_blank" rel="noopener"
+                                class="btn btn-secondary" style="display: inline-flex;">Contact Us</a></p>
+                        <p>Website: <a href="https://nixovena.org" target="_blank" rel="noopener">nixovena.org</a></p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="Assets/logo.png" alt="Almighty Linux" class="footer-logo">
+                    <span class="footer-name">ALMIGHTY LINUX</span>
+                </div>
+                <div class="footer-slogan">
+                    <span>&gt;_</span> The distro for those who can see everything
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Overview</a>
+                    <a href="tools.html">Tools</a>
+                    <a href="docs.html">Docs</a>
+                    <a href="download.html">Download</a>
+                </div>
+                <div class="footer-bottom">
+                    <p>Developed by <a href="https://nixovena.org" target="_blank" rel="noopener">Nixovena Labs</a>
+                        &mdash; <a href="https://nixovena.org" target="_blank" rel="noopener">nixovena.org</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

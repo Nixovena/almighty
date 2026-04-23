@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Download Almighty Linux — Intelligence-grade operating system for OSINT and security research.">
+    <title>Download — Almighty Linux</title>
+    <link rel="icon" href="Assets/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="Assets/logo.png" alt="Almighty Linux">
+                <span>ALMIGHTY</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Overview</a></li>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="docs.html">Docs</a></li>
+                <li><a href="releases.html">Releases</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="download.html" class="active">Download</a></li>
+                <li><a href="osint-sources.html">OSINT Sources</a></li>
+                <li><a href="newsletter.html">Newsletter</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-hero">
+        <h1>Download <span class="text-red">Almighty Linux</span></h1>
+        <p>Read all warnings carefully before downloading.</p>
+    </section>
+
+    <section class="section" style="padding-top: 20px;">
+        <div class="container">
+
+            <!-- Warning Cards -->
+            <div class="warning-grid">
+                <!-- Legal Warning -->
+                <div class="warning-card legal">
+                    <div class="warning-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <div>
+                        <h3>Legal Warning</h3>
+                        <p>Almighty Linux is intended exclusively for authorized security research, penetration testing with written permission, and educational purposes. Using any tool included in this distribution against systems you do not own or have explicit authorization to test is illegal and may result in criminal prosecution under applicable local, national, and international laws including the Computer Fraud and Abuse Act (CFAA), the Computer Misuse Act, and equivalent legislation worldwide. The user assumes full legal responsibility for their actions.</p>
+                    </div>
+                </div>
+
+                <!-- Disclaimer -->
+                <div class="warning-card disclaimer">
+                    <div class="warning-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                    </div>
+                    <div>
+                        <h3>Disclaimer of Liability</h3>
+                        <p>This distribution is provided "as is" without warranty of any kind, express or implied. The developers, contributors, and Nixovena Labs are not responsible for any direct, indirect, incidental, special, or consequential damages, data loss, privacy violations, security breaches, legal issues, or any other consequences arising from the use, misuse, or inability to use this software. By downloading, you accept full responsibility.</p>
+                    </div>
+                </div>
+
+                <!-- Hybrid Distribution Warning -->
+                <div class="warning-card hybrid">
+                    <div class="warning-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                    </div>
+                    <div>
+                        <h3>Hybrid Distribution Warning</h3>
+                        <p><strong>This distribution is not intended for beginners.</strong> Almighty Linux is a hybrid distribution combining Debian Testing and Kali Linux repositories. This architecture can lead to package conflicts, dependency resolution failures, and system instability during updates. Users should have intermediate-to-advanced Linux knowledge. You may encounter broken packages, version mismatches, and situations requiring manual package management. Proceed at your own risk.</p>
+                    </div>
+                </div>
+
+                <!-- Experimental Warning -->
+                <div class="warning-card experimental">
+                    <div class="warning-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                    </div>
+                    <div>
+                        <h3>Experimental Distribution</h3>
+                        <p><strong>This distribution is experimental and not stable.</strong> Almighty Linux is under active development and has not reached a stable release. Some tools may not function correctly, crash unexpectedly, or produce inaccurate results. System components may conflict with each other, and critical services may break after updates. Do not use this distribution in production environments or for mission-critical operations. Always maintain backups and expect unexpected behavior.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Download Box -->
+            <div class="download-box">
+                <h2>Almighty Linux 1.0 Beta</h2>
+                <p class="download-version">v1.0-beta &mdash; x86_64 (amd64) &mdash; ISO Image</p>
+
+                <a href="https://sourceforge.net/projects/almighty/files/release/almightylinux-1.0-beta-amd64.iso/download" class="download-btn-large" id="downloadBtn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    Download ISO
+                </a>
+
+                <div class="verify-section">
+                    <h3>SHA256 Verification</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 12px;">After downloading, verify the integrity of the ISO file by comparing its SHA256 checksum:</p>
+                    <pre><code># Generate the checksum of the downloaded file
+sha256sum almighty-linux-1.0-beta-amd64.iso
+
+# Compare the output with the official checksum below:
+372de34128ea93e9c145a20591b97d6cd944ace9aea111f40beb6873f706253a</code></pre>
+                    <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 16px;">If the checksums match, the file has not been tampered with or corrupted during download. If they do not match, <strong>do not use the file</strong> — re-download from the official source.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="Assets/logo.png" alt="Almighty Linux" class="footer-logo">
+                    <span class="footer-name">ALMIGHTY LINUX</span>
+                </div>
+                <div class="footer-slogan">
+                    <span>&gt;_</span> The distro for those who can see everything
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Overview</a>
+                    <a href="tools.html">Tools</a>
+                    <a href="docs.html">Docs</a>
+                    <a href="download.html">Download</a>
+                </div>
+                <div class="footer-bottom">
+                    <p>Developed by <a href="https://nixovena.org" target="_blank" rel="noopener">Nixovena Labs</a> &mdash; <a href="https://nixovena.org" target="_blank" rel="noopener">nixovena.org</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

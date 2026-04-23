@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Almighty Linux News — Latest updates, announcements, and project developments.">
+    <title>News — Almighty Linux</title>
+    <link rel="icon" href="Assets/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="Assets/logo.png" alt="Almighty Linux">
+                <span>ALMIGHTY</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Overview</a></li>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="docs.html">Docs</a></li>
+                <li><a href="releases.html">Releases</a></li>
+                <li><a href="news.html" class="active">News</a></li>
+                <li><a href="download.html">Download</a></li>
+                <li><a href="osint-sources.html">OSINT Sources</a></li>
+                <li><a href="newsletter.html">Newsletter</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-hero">
+        <h1>Latest <span class="text-red">News</span></h1>
+        <p>Updates, announcements, and project developments.</p>
+    </section>
+
+    <section class="section" style="padding-top: 20px;">
+        <div class="container" style="max-width: 800px;">
+
+            <div class="timeline">
+
+                <!-- First Beta Release -->
+                <div class="timeline-item">
+                    <span class="timeline-date">2026 &mdash; ANNOUNCEMENT</span>
+                    <div class="timeline-card">
+                        <h3>Almighty Linux First Beta Release</h3>
+                        <p>The first public beta release of <strong>Almighty Linux</strong> is now available — an intelligence-grade Linux distribution built for OSINT professionals, security researchers, and digital investigators.</p>
+                        <p>This release marks the culmination of extensive development on custom OSINT tooling, kernel hardening, and operational security infrastructure. Almighty Linux 1.0 Beta ships with 79 security tools, a custom Chromium-based OSINT browser, and a multi-layered hardening profile.</p>
+                        <p>Key highlights of this release:</p>
+                        <ul>
+                            <li>49 custom-built tools developed exclusively for Almighty Linux</li>
+                            <li>Almighty OSINT Browser with anti-fingerprinting and integrated investigative tools</li>
+                            <li>Hardened kernel with ASLR, Spectre/Meltdown mitigations, and BPF hardening</li>
+                            <li>8 dedicated dark web reconnaissance tools</li>
+                            <li>Comprehensive anonymity and trace-cleaning suite</li>
+                        </ul>
+                        <p>The community is invited to test, report bugs, and contribute to the future of open-source intelligence tooling.</p>
+                        <div style="margin-top: 16px;">
+                            <a href="download.html" class="btn btn-primary" style="display: inline-flex;">Download the Beta</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="Assets/logo.png" alt="Almighty Linux" class="footer-logo">
+                    <span class="footer-name">ALMIGHTY LINUX</span>
+                </div>
+                <div class="footer-slogan">
+                    <span>&gt;_</span> The distro for those who can see everything
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Overview</a>
+                    <a href="tools.html">Tools</a>
+                    <a href="docs.html">Docs</a>
+                    <a href="download.html">Download</a>
+                </div>
+                <div class="footer-bottom">
+                    <p>Developed by <a href="https://nixovena.org" target="_blank" rel="noopener">Nixovena Labs</a> &mdash; <a href="https://nixovena.org" target="_blank" rel="noopener">nixovena.org</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
