@@ -40,7 +40,7 @@
 
     <section class="page-hero">
         <h1>Tool <span class="text-red">Inventory</span></h1>
-        <p>79 OSINT and security tools — 49 custom-built, 30 from Kali repositories.</p>
+        <p>89 OSINT and security tools — 59 from Almighty repository, 30 from Kali repositories.</p>
     </section>
 
     <section class="section" style="padding-top: 20px;">
@@ -62,8 +62,8 @@
                     <input type="text" id="toolSearch" placeholder="Search tools by name, description, or category...">
                 </div>
                 <div class="filter-buttons">
-                    <button class="filter-btn active" data-filter="all">All (79)</button>
-                    <button class="filter-btn" data-filter="almighty">Almighty (49)</button>
+                    <button class="filter-btn active" data-filter="all">All (89)</button>
+                    <button class="filter-btn" data-filter="almighty">Almighty (59)</button>
                     <button class="filter-btn" data-filter="kali">Kali (30)</button>
                 </div>
             </div>
@@ -84,11 +84,59 @@
                 <button class="cat-btn" data-cat="security">Security</button>
             </div>
 
-            <div class="tools-count" id="toolCount">Showing <strong>79</strong> of <strong>79</strong> tools</div>
+            <div class="tools-count" id="toolCount">Showing <strong>89</strong> of <strong>89</strong> tools</div>
 
             <div class="tools-grid" id="toolsGrid">
 
                 <!-- ============ ALMIGHTY CUSTOM TOOLS ============ -->
+
+                <!-- almighty-osint-ai -->
+                <div class="tool-card" data-name="almighty-osint-ai" data-source="almighty" data-category="framework"
+                    data-desc="Advanced AI-powered OSINT research assistant developed for Almighty Linux.">
+                    <div class="tool-card-header">
+                        <img src="Assets/logo.png" alt="" class="tool-icon">
+                        <span class="tool-name">almighty-osint-ai</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Framework</span>
+                    <p class="tool-desc">Advanced AI-powered OSINT research assistant developed for Almighty Linux.</p>
+                </div>
+
+                <!-- DescendSec -->
+                <div class="tool-card" data-name="descendsec" data-source="almighty" data-category="social media"
+                    data-desc="Advanced Discord OSINT tool for server and user intelligence.">
+                    <div class="tool-card-header">
+                        <img src="Assets/logo.png" alt="" class="tool-icon">
+                        <span class="tool-name">descendsec</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Social Media</span>
+                    <p class="tool-desc">Advanced Discord OSINT tool for server and user intelligence.</p>
+                </div>
+
+                <!-- mailbull -->
+                <div class="tool-card" data-name="mailbull" data-source="almighty" data-category="emails"
+                    data-desc="Python-based email OSINT tool utilizing the holohe module for deep analysis.">
+                    <div class="tool-card-header">
+                        <img src="Assets/logo.png" alt="" class="tool-icon">
+                        <span class="tool-name">mailbull</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Emails</span>
+                    <p class="tool-desc">Python-based email OSINT tool utilizing the holohe module for deep analysis.</p>
+                </div>
+
+                <!-- mrcrypt2 -->
+                <div class="tool-card" data-name="mrcrypt2" data-source="almighty" data-category="analysis"
+                    data-desc="Next-generation crypto OSINT toolkit for blockchain investigation and tracking.">
+                    <div class="tool-card-header">
+                        <img src="Assets/logo.png" alt="" class="tool-icon">
+                        <span class="tool-name">mrcrypt2</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Analysis</span>
+                    <p class="tool-desc">Next-generation crypto OSINT toolkit for blockchain investigation and tracking.</p>
+                </div>
 
                 <!-- OSINT Browser -->
                 <div class="tool-card" data-name="almighty-osint-browser" data-source="almighty"
@@ -654,7 +702,74 @@
                     <p class="tool-desc">AES-256 encrypted research note storage terminal tool.</p>
                 </div>
 
+                <!-- toutails -->
+                <div class="tool-card" data-name="toutails" data-source="almighty" data-category="social media"
+                    data-desc="Instagram OSINT tool remastered and optimized for Almighty Linux.">
+                    <div class="tool-card-header">
+                        <span class="tool-name">toutails</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Social Media</span>
+                    <p class="tool-desc">Instagram OSINT tool remastered and optimized for Almighty Linux.</p>
+                </div>
+
+                <!-- yesitsme -->
+                <div class="tool-card" data-name="yesitsme" data-source="almighty" data-category="social media"
+                    data-desc="Specialized Instagram intelligence and profile discovery tool.">
+                    <div class="tool-card-header">
+                        <span class="tool-name">yesitsme</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Social Media</span>
+                    <p class="tool-desc">Specialized Instagram intelligence and profile discovery tool.</p>
+                </div>
+
+                <!-- webbextractor -->
+                <div class="tool-card" data-name="webbextractor" data-source="almighty" data-category="domain/ip"
+                    data-desc="Advanced web scraping and data extraction utility.">
+                    <div class="tool-card-header">
+                        <span class="tool-name">webbextractor</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Domain/IP</span>
+                    <p class="tool-desc">Advanced web scraping and data extraction utility.</p>
+                </div>
+
+                <!-- duolingosint -->
+                <div class="tool-card" data-name="duolingosint" data-source="almighty" data-category="social media"
+                    data-desc="OSINT tool for gathering intelligence from Duolingo profiles.">
+                    <div class="tool-card-header">
+                        <span class="tool-name">duolingosint</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Social Media</span>
+                    <p class="tool-desc">OSINT tool for gathering intelligence from Duolingo profiles.</p>
+                </div>
+
+                <!-- kalitorify -->
+                <div class="tool-card" data-name="kalitorify" data-source="almighty" data-category="privacy"
+                    data-desc="Transparent proxy redirector for routing all traffic through the Tor network.">
+                    <div class="tool-card-header">
+                        <span class="tool-name">kalitorify</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Privacy</span>
+                    <p class="tool-desc">Transparent proxy redirector for routing all traffic through the Tor network.</p>
+                </div>
+
+                <!-- openosint -->
+                <div class="tool-card" data-name="openosint" data-source="almighty" data-category="framework"
+                    data-desc="AI-powered OSINT tool with a dedicated Web UI for centralized intelligence.">
+                    <div class="tool-card-header">
+                        <span class="tool-name">openosint</span>
+                        <span class="tool-source almighty">Almighty</span>
+                    </div>
+                    <span class="tool-category">Framework</span>
+                    <p class="tool-desc">AI-powered OSINT tool with a dedicated Web UI for centralized intelligence.</p>
+                </div>
+
                 <!-- ============ KALI TOOLS ============ -->
+
 
                 <div class="tool-card" data-name="theharvester" data-source="kali" data-category="emails"
                     data-desc="Email, subdomain, and IP aggregator from Google, Bing, and Shodan sources.">
